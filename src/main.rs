@@ -1,3 +1,4 @@
+mod bkd018;
 mod bkd019;
 mod bkd020;
 mod bkd021;
@@ -28,11 +29,13 @@ impl Display for BdkDetails {
 fn main() -> Result<(), Box<dyn Error>> {
     // Mnemonic: danger assume iron tobacco advice floor ozone awesome erode describe minimum raw
     let xprv = "tprv8gA4ePCxg235CVo2dSXEFJQsoPzfhVzoyujqUbZ7mPANkmuW1gM1bgWoC9AWByFnj6LxXTpesrzccdNKYe1kBRaGrwyohnigwY3BHj3kroL";
+    let bdk18_details = bkd018::execute(xprv).unwrap();
     let bdk19_details = bkd019::execute(xprv).unwrap();
     let bdk20_details = bkd020::execute(xprv).unwrap();
     let bdk21_details = bkd021::execute(xprv).unwrap();
     let bdk22_details = bkd022::execute(xprv).unwrap();
 
+    println!("BDK 018 {}", bdk18_details);
     println!("BDK 019 {}", bdk19_details);
     println!("BDK 020 {}", bdk20_details);
     println!("BDK 021 {}", bdk21_details);
