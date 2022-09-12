@@ -1,0 +1,10 @@
+[package]
+name = "bdk-playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bdk19 = { version = "0.19.0", package = "bdk", features = ["key-value-db", "electrum"] }
+bdk20 = { version = "0.20.0", package = "bdk", features = ["key-value-db", "electrum"] }
+bdk21 = { version = "0.21.0", package = "bdk", features = ["key-value-db", "electrum"] }
+bdk22 = { version = "0.22.0", package = "bdk", features = ["key-value-db", "electrum"] }
